@@ -1,0 +1,45 @@
+---
+title: "Latihan3_C_123170018"
+author: "Nisfu Saaban"
+date: "12/2/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+### include library
+
+```{r}
+    library(dslabs)
+    data(murders)
+```
+###1.a **List data murders based on state**
+
+```{r murders}
+    murders$state
+```
+    + pada list program di atas di gunakan murders$state untuk menunjukan data        dari murders berdasarkan state
+    
+###1.b **list data total pembunuhan 50 negara dan DC**
+
+```{r}
+    murders$total
+    murders[9,"total"]
+```
+
+    + pada list program tersebut menampilkan data total pembunuhan dari 50 negara bagian dan juga DC
+    
+###1.c **menunjukan variable**
+
+```{r}
+  head(murders)
+```
+
+###1.d **str tidak relevan**
+
+```{r}
+```
