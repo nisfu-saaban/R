@@ -31,15 +31,62 @@ knitr::opts_chunk$set(echo = TRUE)
     murders[9,"total"]
 ```
 
-    + pada list program tersebut menampilkan data total pembunuhan dari 50 negara bagian dan juga DC
+* pada list program tersebut menampilkan data total pembunuhan dari 50 negara bagian dan juga DC
     
-###1.c **menunjukan variable**
+### 1.c **menunjukan variable**
 
 ```{r}
   head(murders)
 ```
+* menampilkan semua header yang ada pada murders
 
-###1.d **str tidak relevan**
+### 1.d **str tidak relevan**
 
 ```{r}
+    str(murders)
 ```
+* pada listing program tersebut menampilkan str yang tidak relevan
+
+### 2. Menampilkan kolom yang ada pada *data frame*
+
+```{r}
+    variable.name(murders)
+```
+* untuk listing tersebut menggunakan variable di mana akan mengakses colom pada murders
+
+### 3. mengggunakan simbol $ dan jenis class
+
+```
+{r}
+a <- murders$abb
+class(a)
+```
+
+* pada list tersebut kita memasukan nilai dari singkatan negara ke dalam variable a dan mencari janis dari variable a dengan menggunakan class
+
+### 4. menyimpan dan membandingkan data type
+
+```
+{r}
+b <- murders[1:51,"abb"]
+a == b
+```
+
+* memasukan nilai dari abb ke dalam object b dan membandingkan type data dari a denga b 
+
+### 5. menggunakan fungsi level dan length
+
+```{r}
+    levels(murders$region)
+    length(murders$region)
+```
+
+* untuk mengetahui jumlah panjang dari data yang ada makan kita bisa menggunakan fungsi length dan untuk mengetahui antrian yang ada kita bisa menggunakan fungsi levels
+
+### 6. menggunakan fungsi table
+
+```{r}
+    table(murders$region)
+```
+
+* pada list tersebut bisa di gunakan untuk mengekstrasi data pada tipe data vektor dan frekuensi dari setiap elemen
